@@ -54,7 +54,7 @@ class WaitingQueue:
         for d in self.queue:
             if self.queue[i].waitingFinishTime == systemTime:
                 return True
-        i += 1
+            i += 1
         return False
     def dequeue(self):
         self.queue[0].cpuRemainingTime = self.queue[0].cpuTime if self.queue[0].waitingFinishTime == systemTime else self.queue[0].cpuRemainingTime
